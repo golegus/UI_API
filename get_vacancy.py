@@ -87,7 +87,7 @@ def get_vacancies(vacancy, requirements, region, pages):
 # Преобразуем данные по каждой вакансии
 final_results = []
 for vacancy, requirements in requirements_dict.items():
-    data = get_vacancies(vacancy, requirements, region, 1)
+    data = get_vacancies(vacancy, requirements, region, 10)
     if data['count'] > 0:
         final_results.append(data)
 
