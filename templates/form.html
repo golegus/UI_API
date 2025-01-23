@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мегапарсер HH</title>
+    <link href="css//bootstrap.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #d6d6d6;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-bar {
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .menu-bar .btn {
+            margin-left: 10px;
+        }
+        .menu-bar .btn-info {
+            color: #fff;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .form-container {
+            max-width: 500px;
+            width: 100%;
+            height: 200px; 
+            max-height: 200px; 
+        }
+
+        .horizontal-line {
+            border: none;
+            border-top: 1px solid #757575;
+            width: 100%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Полоса меню -->
+    <div class="menu-bar d-flex justify-content-end">
+        <a href="contacts.html" class="btn btn-info">Контакты</a>
+    </div>
+
+    <!-- Основное содержимое страницы -->
+    <div class="content">
+        <div class="form-container">
+            <h1 class="display-4">Мегапарсер HH</h1>
+            <p class="lead">Форма для поиска</p>
+            <form action="search_results.html" method="get">
+                <!-- Горизонтальное расположение поля ввода и выпадающего списка -->
+                <div class="d-flex flex-row mb-3">
+                    <input type="text" class="form-control me-2" placeholder="Введите текст для поиска" name="query" required>
+                    <select class="form-select" name="search_scope">
+                        <option value="everywhere">Везде</option>
+                        <option value="company">В названии компании</option>
+                        <option value="position" selected>В названии вакансии</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Искать вакансии</button>
+            </form>
+            <hr class="horizontal-line">
+            <a href="index.html">На главную</a>
+        </div> 
+    </div>
+
+    <script src="js//bootstrap.bundle.min.js"></script>
+</body>
+</html>

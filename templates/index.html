@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мегапарсер HH</title>
+    <link href="css//bootstrap.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #d6d6d6;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-bar {
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .menu-bar .btn {
+            margin-left: 10px;
+        }
+        .menu-bar .btn-info {
+            color: #fff;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .form-container {
+            max-width: 500px;
+            width: 100%;
+            height: 200px; 
+            max-height: 200px; 
+            /*overflow: auto;  Для прокрутки, если содержимое больше max-height */
+        }
+        .horizontal-line {
+            border: none;
+            border-top: 1px solid #757575;
+            width: 100%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Полоса меню -->
+    <div class="menu-bar d-flex justify-content-end">
+        <!-- <a href="index.html" class="btn btn-success">На главную</a> -->
+        <a href="contacts.html" class="btn btn-info">Контакты</a>
+    </div>
+
+    <!-- Основное содержимое страницы -->
+    <div class="content">
+        <div>
+        <div class="form-container">
+            <h1 class="display-4">Мегапарсер HH</h1>
+            <p class="lead">Информация о системе</p>
+            <p>Парсер умеет получать вакансии с hh.ru и что-то с ними делать. Можно задать различные параметры поиска.</p>
+            <a href="form.html" class="btn btn-primary">Начать поиск</a>
+            <hr class="horizontal-line">
+        </div>
+    </div>
+
+    <script src="js//bootstrap.bundle.min.js"></script>
+</body>
+</html>
